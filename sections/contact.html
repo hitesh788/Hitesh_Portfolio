@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" draggable="false"href="/images/Favicon.webp">
+  <link rel="icon" type="image/x-icon" draggable="false" href="/images/Favicon.webp">
   <title>Contact | Hitesh</title>
   <link rel="stylesheet" href="/css/contact.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <nav>
       <ul>
-           <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
@@ -38,6 +38,7 @@
 
   <!-- Contact Section -->
   <section class="contact">
+
     <h3>CONTACT</h3>
     <h2>Want to contact me?</h2>
 
@@ -84,6 +85,22 @@
         </div>
       </div>
     </div>
+   <div class="ad-box" id="ad-box">
+  <button class="close-ad" id="close-ad">&times;</button>
+  <a href="https://www.softgridtechnologies.site" target="_blank">
+    <img src="/images/softgrid.webp" alt="Ad Banner" loading="lazy">
+  </a>
+  <script>
+  document.getElementById("close-ad").addEventListener("click", function() {
+    const ad = document.getElementById("ad-box");
+    ad.style.animation = "fadeOut 0.3s forwards";
+    setTimeout(() => ad.style.display = "none", 300);
+  });
+</script>
+
+</div>
+
+
   </section>
 
   <!-- Footer -->
@@ -91,10 +108,13 @@
     <div class="footer-container">
       <div class="footer-left">
         <div class="social-logos">
-          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank"><i
+              class="fab fa-instagram"></i></a>
           <a href="https://github.com/hitesh788" draggable="false" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
@@ -105,9 +125,12 @@
 
       <div class="footer-right">
         <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp" draggable="false" alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp" draggable="false" alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp" draggable="false" alt="HackerRank Logo" loading="lazy"></a>
+          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"
+              draggable="false" alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"
+              draggable="false" alt="CodeChef Logo" loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+              draggable="false" alt="HackerRank Logo" loading="lazy"></a>
         </div>
       </div>
     </div>
@@ -177,4 +200,5 @@
     });
   </script>
 </body>
+
 </html>

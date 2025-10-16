@@ -1,10 +1,11 @@
-/* ===== Contact Headings ===== */
-/* Reset */
+/* ================================
+   RESET & BASE STYLES
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -12,7 +13,9 @@ body {
   color: #333;
 }
 
-/* Navbar */
+/* ================================
+   NAVBAR
+================================ */
 header {
   display: flex;
   justify-content: space-between;
@@ -22,21 +25,19 @@ header {
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .hero-logo {
-  position: absolute;
-  top: 10px;      /* distance from top */
-  left: 70px;     /* distance from left */
-  z-index: 10;    /* above slider images */
+  position: relative;
 }
 
 .hero-logo img {
-  height: 40px;   /* adjust size as needed */
+  height: 40px;
   width: auto;
 }
 
+/* Navbar Links */
 nav ul {
   display: flex;
   list-style: none;
@@ -55,8 +56,53 @@ nav ul li a.active {
   color: #808000;
 }
 
+/* Hamburger Icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
 
-/* Contact Section */
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 25px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* ================================
+   CONTACT SECTION
+================================ */
 .contact {
   padding: 60px 100px;
   text-align: center;
@@ -75,7 +121,6 @@ nav ul li a.active {
   margin-bottom: 40px;
 }
 
-/* Layout */
 .contact-container {
   display: flex;
   gap: 50px;
@@ -85,13 +130,16 @@ nav ul li a.active {
   text-align: left;
 }
 
-/* Contact Form */
+/* ================================
+   CONTACT FORM
+================================ */
 .contact-form {
   flex: 1;
   min-width: 350px;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
 }
 
 .form-row {
@@ -134,21 +182,23 @@ textarea {
 
 /* Submit Button */
 .contact-form .btn {
-  background: #808080; /* grey background */
-  color: #fff;          /* white text */
+  background: #808080;
+  color: #fff;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form .btn:hover {
-  background: #666; /* darker grey on hover */
+  background: #666;
+  transform: scale(1.02);
 }
 
-
-/* Contact Info */
+/* ================================
+   CONTACT INFO
+================================ */
 .contact-info {
   flex: 1;
   min-width: 300px;
@@ -161,103 +211,108 @@ textarea {
   margin-bottom: 20px;
 }
 
+/* Perfect round icons */
 .icon {
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
   background: #333;
   color: #fff;
-  padding: 10px;
   border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  background: #808000;
+  transform: scale(1.1);
 }
 
 .info-box a {
   color: #808000;
   text-decoration: none;
-}
-/* Footer Styling */
-.footer {
-  background: #2b3035;
-  color: #dcdcdc;
-  padding: 40px;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
-/* Footer container: left icons + center content */
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.info-box a:hover {
+  color: #333;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+/* ================================
+   AD BOX BESIDE CONTACT FORM
+================================ */
+.ad-box {
   position: relative;
-  gap: 20px;
+  align-self: flex-start; /* push ad upward */
+  margin-top: -15px;
+  text-align: right;
 }
 
-/* Left: Social Icons */
-.footer-left {
-  position: absolute; /* push icons to left */
-  left: 40px; /* adjust spacing from edge */
+.ad-box img {
+  width: 100%;
+  max-width: 350px; /* controls ad size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ftco-footer-social {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 10px;
+.ad-box img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+/* Close (X) Button for Ad */
+.close-ad {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.ftco-footer-social li a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  background: #444;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 16px;
-  transition: all 0.3s;
+.close-ad:hover {
+  color: #ff0202;
 }
 
-/* Brand colors on hover */
-.ftco-footer-social li a[href*="facebook"]:hover { background: #1877F2; }
-.ftco-footer-social li a[href*="instagram"]:hover { background: #E1306C; }
-.ftco-footer-social li a[href*="github"]:hover { background: #333; }
-.ftco-footer-social li a[href*="linkedin"]:hover { background: #0A66C2; }
-
-.ftco-footer-social li a:hover { transform: scale(1.1); }
-
-/* Center content */
-.footer-center {
-  text-align: center;
-}
-
-.footer-center p {
-  margin: 3px 0;
-  font-size: 14px;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-  font-size: 13px;
-  color: #aaa;
-  text-align: center;
-}
 
 /* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+@media (max-width: 992px) {
+  .ad-box {
+    margin-top: 20px;
+    text-align: center;
   }
 
-  .footer-left {
-    position: static;
+  .ad-box img {
+    max-width: 100%;
   }
 }
+
+
+/* ================================
+   FOOTER
+================================ */
 .footer {
   background: #2b3035;
   color: #dcdcdc;
@@ -266,22 +321,23 @@ textarea {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Footer container: left, center, right */
 .footer-container {
   display: flex;
-  justify-content: space-between; /* left, center, right */
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Social Media Icons (Left) */
-.footer-left .social-logos {
+/* Social Media Icons */
+.footer-left .social-logos,
+.footer-right .social-logos {
   display: flex;
   gap: 12px;
 }
 
-.footer-left .social-logos a {
+.footer-left .social-logos a,
+.footer-right .social-logos a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,24 +351,10 @@ textarea {
   text-decoration: none;
 }
 
-.footer-left .social-logos a:hover { transform: scale(1.1); }
-
-/* Coding Platform Logos (Right) */
-.footer-right .social-logos {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-right .social-logos a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: #444;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.3s ease, background 0.3s ease;
+.footer-left .social-logos a:hover,
+.footer-right .social-logos a:hover {
+  transform: scale(1.1);
+  background: #808000;
 }
 
 .footer-right .social-logos a img {
@@ -321,9 +363,6 @@ textarea {
   object-fit: contain;
 }
 
-.footer-right .social-logos a:hover { transform: scale(1.1); }
-
-/* Center content */
 .footer-center {
   text-align: center;
   flex: 1;
@@ -334,7 +373,6 @@ textarea {
   font-size: 14px;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   margin-top: 20px;
   border-top: 1px solid #444;
@@ -344,19 +382,12 @@ textarea {
   text-align: center;
 }
 
-/* Responsive */
+/* Responsive Footer */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-  }
-
-  .footer-left, .footer-right {
-    order: 0;
-  }
-
-  .footer-center {
     text-align: center;
+    gap: 15px;
   }
 }
