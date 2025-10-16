@@ -35,7 +35,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ===== NAVBAR ===== -->
-  <!-- Navbar -->
   <header>
     <section id="home-section" class="hero">
       <a href="/index.html" class="hero-logo">
@@ -183,15 +182,13 @@
   </footer>
   <script>
     const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
+    const nav = document.getElementById('navbar');
 
     menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active'); // Slide in/out menu
+      menuToggle.classList.toggle('active'); // Optional: animate icon
     });
-
   </script>
-
 
 </body>
 

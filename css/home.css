@@ -25,20 +25,6 @@ header {
   z-index: 1000;
 }
 
-/* Force hamburger to right side */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-  position: absolute;
-  right: 25px;
-  /* Push to right corner */
-  top: 22px;
-  /* Vertically align */
-}
-
-
 .hero-logo img {
   height: 40px;
   width: auto;
@@ -64,52 +50,6 @@ nav ul li a.active {
   color: #808000;
 }
 
-/* ===== Mobile Navbar (Hamburger) ===== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #333;
-  border-radius: 2px;
-}
-
-@media (max-width: 991px) {
-  header {
-    padding: 10px 25px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    width: 70%;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px 0;
-  }
-
-  nav ul.show {
-    right: 10px;
-  }
-
-  nav ul li {
-    margin: 15px 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-
 /* ===== Hero Section ===== */
 .hero-section {
   padding-top: 100px;
@@ -131,7 +71,6 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
-
   .carousel-inner img,
   .carousel-inner video {
     height: 280px;
@@ -139,7 +78,6 @@ nav ul li a.active {
 }
 
 @media (max-width: 480px) {
-
   .carousel-inner img,
   .carousel-inner video {
     height: 200px;
@@ -290,45 +228,64 @@ nav ul li a.active {
     justify-content: center;
   }
 }
+
 /* ===== Responsive ===== */
-  @media (max-width: 991px) {
-
-    /* Show hamburger */
-    .menu-toggle {
-      display: block;
-      position: absolute;
-      right: 25px;
-      top: 20px;
-    }
-
-    /* Mobile nav menu */
-    nav {
-      position: fixed;
-      top: 70px;
-      /* adjust depending on header height */
-      right: -100%;
-      width: 70%;
-      height: calc(100vh - 70px);
-      background: #fff;
-      box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
-      transition: right 0.3s ease;
-      display: flex;
-      justify-content: center;
-      padding-top: 50px;
-      z-index: 100;
-    }
-
-    nav.active {
-      right: 0;
-    }
-
-    nav ul {
-      flex-direction: column;
-      gap: 25px;
-      text-align: center;
-    }
-
-    nav ul li {
-      margin: 15px 0;
-    }
+@media (max-width: 991px) {
+  header {
+    padding: 10px 25px;
   }
+}
+/* Hamburger Menu - Show only on mobile */
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  z-index: 200;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+  /* Mobile nav menu hidden by default */
+  nav {
+    position: fixed;
+    top: 70px; /* adjust according to header height */
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    z-index: 999;
+  }
+
+  /* When hamburger clicked */
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
