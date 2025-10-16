@@ -263,12 +263,13 @@ textarea {
   position: relative;
   align-self: flex-start; /* push ad upward */
   margin-top: -15px;
+
   text-align: right;
 }
 
 .ad-box img {
   width: 100%;
-  max-width: 350px; /* controls ad size */
+  max-width: 500px; /* controls ad size */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -282,11 +283,11 @@ textarea {
 /* Close (X) Button for Ad */
 .close-ad {
   position: absolute;
-  top: 8px;
+  top: 5px;
   right: 12px;
   background: transparent;
   border: none;
-  font-size: 22px;
+  font-size: 40px;
   color: #ffffff;
   cursor: pointer;
   z-index: 10;
