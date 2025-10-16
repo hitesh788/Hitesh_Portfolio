@@ -1,0 +1,11 @@
+# robots.txt for https://www.hiteshjoshi.com.np
+
+User-agent: *
+Allow: /
+
+# Disallow specific folders (if you want to hide any private sections)
+# Disallow: /admin/
+# Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://www.hiteshjoshi.com.np/sitemap.xml
