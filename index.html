@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" draggable="false" href="/images/Favicon.png">
+  <link rel="icon" type="image/x-icon" draggable="false" href="/images/Favicon.webp" loading="lazy">
   <title>Hitesh | Home</title>
   <link rel="stylesheet" href="/css/home.css">
   <meta name="google-site-verification" content="G7nHmrK-GhUF3RwS97c3UiU47gRB_h-Ro61tZvD2_10" />
@@ -12,6 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Basic SEO -->
+<title>Hitesh Joshi | Full-Stack Developer & Cybersecurity Enthusiast</title>
+<meta name="description" content="Portfolio of Hitesh Joshi – a Full-Stack Developer passionate about cybersecurity, AI, and modern web solutions.">
+<meta name="keywords" content="Hitesh Joshi, portfolio, developer, cybersecurity, MERN stack, web developer, Nepal">
+<meta name="author" content="Hitesh Joshi">
+
+<!-- Social Sharing -->
+<meta property="og:title" content="Hitesh Joshi | Developer Portfolio">
+<meta property="og:description" content="Explore Hitesh Joshi’s projects, skills, and certifications.">
+<meta property="og:image" content="https://www.hiteshjoshi.com.np/assets/profile.webp">
+<meta property="og:url" content="https://www.hiteshjoshi.com.np/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.hiteshjoshi.com.np/assets/favicon.webp" loading="lazy">
 
 </head>
 
@@ -23,8 +38,14 @@
   <header>
     <section id="home-section" class="hero">
       <a href="index.html" class="hero-logo">
-        <img src="/images/Main-Logo.png" alt="Logo">
+        <img src="/images/Main-Logo.webp" alt="Logo" loading="lazy">
       </a>
+      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
     </section>
 
     <nav>
@@ -62,20 +83,20 @@
 
             <!-- Slide 1: Image -->
             <div class="carousel-item active">
-              <img src="/images/Home_Photo.jpg" draggable="false" class="d-block w-100" alt="Slide 1">
+              <img src="/images/Home_Photo.webp" draggable="false" class="d-block w-100" alt="Slide 1" loading="lazy">
             </div>
 
             <!-- Slide 2: Video -->
             <div class="carousel-item">
               <video class="d-block w-100" autoplay muted loop playsinline>
-                <source src="/images/Home.mp4" draggable="false" type="video/mp4">
+                <source src="/images/Home.mp4" draggable="false" type="video/mp4" loading="lazy">
                 Your browser does not support the video tag.
               </video>
             </div>
 
             <!-- Slide 3: Image -->
             <div class="carousel-item">
-              <img src="/images/Home-2.png" draggable="false" class="d-block w-100" alt="Slide 3">
+              <img src="/images/Home-2.webp" draggable="false" class="d-block w-100" alt="Slide 3" loading="lazy">
             </div>
 
           </div>
@@ -144,12 +165,12 @@
       <!-- Right: Coding Platform Logos -->
       <div class="footer-right">
         <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" draggable="false" target="_blank"><img src="/images/LeetCode_Logo.png"
-              alt="LeetCode Logo"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" draggable="false" target="_blank"><img src="/images/Codechef_Logo.png"
-              alt="CodeChef Logo"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" draggable="false" target="_blank"><img src="/images/Hackerrank_Logo.png"
-              alt="HackerRank Logo"></a>
+          <a href="https://leetcode.com/u/hejoshi77/" draggable="false" target="_blank"><img src="/images/LeetCode_Logo.webp"
+              alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" draggable="false" target="_blank"><img src="/images/Codechef_Logo.webp"
+              alt="CodeChef Logo" loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" draggable="false" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+              alt="HackerRank Logo" loading="lazy"></a>
         </div>
       </div>
     </div>
@@ -159,6 +180,11 @@
       <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
     </footer>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
 
 
 </body>
