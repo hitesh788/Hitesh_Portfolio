@@ -290,3 +290,45 @@ nav ul li a.active {
     justify-content: center;
   }
 }
+/* ===== Responsive ===== */
+  @media (max-width: 991px) {
+
+    /* Show hamburger */
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 25px;
+      top: 20px;
+    }
+
+    /* Mobile nav menu */
+    nav {
+      position: fixed;
+      top: 70px;
+      /* adjust depending on header height */
+      right: -100%;
+      width: 70%;
+      height: calc(100vh - 70px);
+      background: #fff;
+      box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+      transition: right 0.3s ease;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      z-index: 100;
+    }
+
+    nav.active {
+      right: 0;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+    }
+
+    nav ul li {
+      margin: 15px 0;
+    }
+  }
