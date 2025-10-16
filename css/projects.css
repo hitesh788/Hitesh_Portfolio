@@ -18,11 +18,12 @@ header {
   align-items: center;
   padding: 15px 60px;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
 }
+
 
 .hero-logo img {
   height: 40px;
@@ -77,7 +78,7 @@ nav ul li a.active {
 .project-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 320px;
@@ -85,7 +86,7 @@ nav ul li a.active {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -205,7 +206,8 @@ nav ul li a.active {
     text-align: center;
   }
 
-  .footer-left, .footer-right {
+  .footer-left,
+  .footer-right {
     justify-content: center;
   }
 }
@@ -233,5 +235,78 @@ nav ul li a.active {
 
   .project-card img {
     height: 160px;
+  }
+}
+
+/* ===== Hamburger ===== */
+.menu-toggle {
+  display: none;
+  /* Hidden on desktop */
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  z-index: 200;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #808000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+  /* Mobile nav menu */
+  nav {
+    position: fixed;
+    top: 70px;
+    /* adjust depending on header height */
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    z-index: 100;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
   }
 }

@@ -25,9 +25,15 @@
       </a>
     </section>
 
-    <nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
-      <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
@@ -59,8 +65,10 @@
         <div class="project-info">
           <h4>Chess Master – Multiplayer App</h4>
           <p>Interactive chess application for all skill levels with ranked multiplayer mode, AI-powered tutorials,
-            strategic puzzle challenges, and global leaderboard support to enhance gameplay and community engagement.</p>
-          <a href="https://chess-game-beige.vercel.app/" target="_blank" draggable="false" class="project-link">View Project</a>
+            strategic puzzle challenges, and global leaderboard support to enhance gameplay and community engagement.
+          </p>
+          <a href="https://chess-game-beige.vercel.app/" target="_blank" draggable="false" class="project-link">View
+            Project</a>
         </div>
       </div>
 
@@ -68,7 +76,8 @@
         <img src="/images/cyber-hygeine.webp" alt="Project 3" loading="lazy">
         <div class="project-info">
           <h4>CyberTrack – Cyber Hygiene Tracker</h4>
-          <p>A personal cybersecurity companion app that monitors password strength, device security, digital footprint alerts, 
+          <p>A personal cybersecurity companion app that monitors password strength, device security, digital footprint
+            alerts,
             and offers weekly actionable tips to maintain a healthy online presence and prevent vulnerabilities.</p>
           <a href="https://cyberhygienetrackerr-9gip.vercel.app/" target="_blank" class="project-link">View Project</a>
         </div>
@@ -96,47 +105,59 @@
 
   <!-- Footer -->
   <footer class="footer">
-  <div class="footer-container">
-    <!-- Left: Social Media Icons -->
-    <div class="footer-left">
-      <div class="social-logos">
-        <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/hiteshh_joshiii"draggable="false" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/hitesh788" draggable="false" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+    <div class="footer-container">
+      <!-- Left: Social Media Icons -->
+      <div class="footer-left">
+        <div class="social-logos">
+          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/hitesh788" draggable="false" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Center: Contact Info -->
+      <div class="footer-center">
+        <p>Kinathukadavu, Coimbatore, Tamilnadu, India</p>
+        <p>+91-8015600894 | hejoshi77@gmail.com</p>
+      </div>
+
+      <!-- Right: Coding Platform Logos -->
+      <div class="footer-right">
+        <div class="social-logos">
+          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"
+              draggable="false" alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"
+              draggable="false" alt="CodeChef Logo" loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+              draggable="false" alt="HackerRank Logo" loading="lazy"></a>
+        </div>
       </div>
     </div>
 
-    <!-- Center: Contact Info -->
-    <div class="footer-center">
-      <p>Kinathukadavu, Coimbatore, Tamilnadu, India</p>
-      <p>+91-8015600894 | hejoshi77@gmail.com</p>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
+  </footer>
 
-    <!-- Right: Coding Platform Logos -->
-    <div class="footer-right">
-       <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"  draggable="false" alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"draggable="false" alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"draggable="false" alt="HackerRank Logo" loading="lazy"></a>
-        </div>
-    </div>
-  </div>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
-  </div>
-</footer>
-
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active'); // Slide in/out menu
+      menuToggle.classList.toggle('active'); // Optional: animate icon
+    });
+  </script>
 
 </body>
 

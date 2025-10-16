@@ -22,7 +22,7 @@ header {
   align-items: center;
   padding: 15px 80px;
   background: #fff;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -88,7 +88,7 @@ nav ul li a.active {
     display: none;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   nav ul.active {
@@ -138,7 +138,7 @@ nav ul li a.active {
   min-width: 350px;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
 
@@ -162,7 +162,8 @@ label span {
   color: red;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -171,7 +172,8 @@ input, textarea {
   transition: border 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #808000;
 }
 
@@ -256,12 +258,14 @@ textarea {
     flex-direction: column;
   }
 }
+
 /* ================================
    AD BOX BESIDE CONTACT FORM
 ================================ */
 .ad-box {
   position: relative;
-  align-self: flex-start; /* push ad upward */
+  align-self: flex-start;
+  /* push ad upward */
   margin-top: -15px;
 
   text-align: right;
@@ -269,17 +273,19 @@ textarea {
 
 .ad-box img {
   width: 100%;
-  max-width: 500px; /* controls ad size */
+  max-width: 500px;
+  /* controls ad size */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ad-box img:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 /* Close (X) Button for Ad */
 .close-ad {
   position: absolute;
@@ -390,5 +396,78 @@ textarea {
     align-items: center;
     text-align: center;
     gap: 15px;
+  }
+}
+
+/* ===== Hamburger ===== */
+.menu-toggle {
+  display: none;
+  /* Hidden on desktop */
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  z-index: 200;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #808000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+  /* Mobile nav menu */
+  nav {
+    position: fixed;
+    top: 70px;
+    /* adjust depending on header height */
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    z-index: 100;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
   }
 }

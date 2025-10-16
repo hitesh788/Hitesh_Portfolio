@@ -15,13 +15,19 @@
   <header>
     <section id="home-section" class="hero">
       <a href="/index.html" class="hero-logo">
-        <img src="/images/Main-Logo.webp" alt="Logo"loading="lazy">
+        <img src="/images/Main-Logo.webp" alt="Logo" loading="lazy">
       </a>
     </section>
 
-    <nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
-           <li><a href="index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
@@ -86,6 +92,14 @@
         <p>Have demonstrated proficiency and creativity in graphic design, consistently delivering visually compelling
           solutions across a diverse range of projects that are based on designing and crafting.</p>
       </div>
+      <!-- Card 7 -->
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-object-group"></i></div>
+        <h4>UI/UX Design</h4>
+        <p>Skilled in crafting intuitive and engaging user interfaces by combining creative design with user research,
+          ensuring seamless and meaningful digital experiences.</p>
+      </div>
+
     </div>
   </section>
 
@@ -118,10 +132,13 @@
 
       <!-- Right: Coding Platform Logos -->
       <div class="footer-right">
-       <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp" draggable="false" alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp" draggable="false" alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp" draggable="false" alt="HackerRank Logo" loading="lazy"></a>
+        <div class="social-logos">
+          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"
+              draggable="false" alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"
+              draggable="false" alt="CodeChef Logo" loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+              draggable="false" alt="HackerRank Logo" loading="lazy"></a>
         </div>
       </div>
     </div>
@@ -130,8 +147,17 @@
     <div class="footer-bottom">
       <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
-    </footer>
+  </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active'); // Slide in/out menu
+      menuToggle.classList.toggle('active'); // Optional: animate icon
+    });
+  </script>
 
 </body>
 

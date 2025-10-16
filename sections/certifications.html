@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon"draggable="false" href="/images/Favicon.webp">
+  <link rel="icon" type="image/x-icon" draggable="false" href="/images/Favicon.webp">
   <title>Certifications | Hitesh</title>
   <link rel="stylesheet" href="/css/certification.css">
   <!-- Font Awesome for social icons -->
@@ -18,12 +18,19 @@
   <header>
     <section id="home-section" class="hero">
       <a href="/index.html" class="hero-logo">
-        <img src="/images/Main-Logo.webp" draggable="false"alt="Logo">
+        <img src="/images/Main-Logo.webp" alt="Logo" loading="lazy">
       </a>
     </section>
-    <nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
-      <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
@@ -49,7 +56,8 @@
       <div class="certificate">
         <a href="https://www.coursera.org/learn/foundations-of-cybersecurity/home/module/1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta"
           target="_blank">
-          <img src="/certifications/Coursera_Foundation_Of_Cybersecurity.webp" draggable="false" alt="Certificate 2" loading="lazy">
+          <img src="/certifications/Coursera_Foundation_Of_Cybersecurity.webp" draggable="false" alt="Certificate 2"
+            loading="lazy">
         </a>
       </div>
 
@@ -81,7 +89,8 @@
 
       <div class="certificate">
         <a href="https://tinyurl.com/ctwk2s6t" target="_blank">
-          <img src="/certifications/Simplilearn_C Programming.webp" draggable="false" alt="Certificate 7" loading="lazy">
+          <img src="/certifications/Simplilearn_C Programming.webp" draggable="false" alt="Certificate 7"
+            loading="lazy">
         </a>
       </div>
 
@@ -90,47 +99,59 @@
 
   <!-- Footer (moved outside the section) -->
   <footer class="footer">
-  <div class="footer-container">
-    <!-- Left: Social Media Icons -->
-    <div class="footer-left">
-      <div class="social-logos">
-        <a href="https://www.facebook.com/hiteshjoshi1110" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/hiteshh_joshiii" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/hitesh788" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/hiteshjoshi1110" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+    <div class="footer-container">
+      <!-- Left: Social Media Icons -->
+      <div class="footer-left">
+        <div class="social-logos">
+          <a href="https://www.facebook.com/hiteshjoshi1110" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/hiteshh_joshiii" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/hitesh788" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/hiteshjoshi1110" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Center: Contact Info -->
+      <div class="footer-center">
+        <p>Kinathukadavu, Coimbatore, Tamilnadu, India</p>
+        <p>+91-8015600894 | hejoshi77@gmail.com</p>
+      </div>
+
+      <!-- Right: Coding Platform Logos -->
+      <div class="footer-right">
+        <div class="social-logos">
+          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"
+              alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"
+              alt="CodeChef Logo" loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+              alt="HackerRank Logo" loading="lazy"></a>
+        </div>
       </div>
     </div>
 
-    <!-- Center: Contact Info -->
-    <div class="footer-center">
-      <p>Kinathukadavu, Coimbatore, Tamilnadu, India</p>
-      <p>+91-8015600894 | hejoshi77@gmail.com</p>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
 
-    <!-- Right: Coding Platform Logos -->
-    <div class="footer-right">
-       <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp" alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp" alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp" alt="HackerRank Logo" loading="lazy"></a>
-        </div>
-    </div>
-  </div>
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
-  </div>
-</footer>
-
+  </script>
 
 </body>
 

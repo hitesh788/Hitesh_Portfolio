@@ -24,6 +24,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 /* Force hamburger to right side */
 .menu-toggle {
   display: none;
@@ -31,8 +32,10 @@ header {
   cursor: pointer;
   gap: 4px;
   position: absolute;
-  right: 25px;   /* Push to right corner */
-  top: 22px;     /* Vertically align */
+  right: 25px;
+  /* Push to right corner */
+  top: 22px;
+  /* Vertically align */
 }
 
 
@@ -128,6 +131,7 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
+
   .carousel-inner img,
   .carousel-inner video {
     height: 280px;
@@ -135,6 +139,7 @@ nav ul li a.active {
 }
 
 @media (max-width: 480px) {
+
   .carousel-inner img,
   .carousel-inner video {
     height: 200px;

@@ -1,41 +1,32 @@
-
-/* ===== About Headings ===== */
-
-/* Reset */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background: #f5f7fa;
   color: #333;
+  overflow-x: hidden;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 80px;
   background: #fff;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
-}
-
-.hero-logo {
-  position: absolute;
-  top: 10px;      /* distance from top */
-  left: 70px;     /* distance from left */
-  z-index: 10;    /* above slider images */
+  z-index: 100;
 }
 
 .hero-logo img {
-  height: 40px;   /* adjust size as needed */
+  height: 40px;
   width: auto;
 }
 
@@ -57,7 +48,15 @@ nav ul li a.active {
   color: #808000;
 }
 
-/* About Section */
+/* ===== HAMBURGER BUTTON ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* ===== ABOUT SECTION ===== */
 .about {
   padding: 60px 100px;
   text-align: center;
@@ -68,11 +67,12 @@ nav ul li a.active {
   letter-spacing: 2px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #808000;
 }
 
 .about h2 {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 40px;
 }
 
@@ -93,23 +93,24 @@ nav ul li a.active {
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid #808000;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Content */
+/* About Content */
 .about-content {
   flex: 1;
   min-width: 350px;
 }
 
 .about-content h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 15px;
 }
 
 .about-content p {
   margin-bottom: 15px;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 /* Info Grid */
@@ -124,7 +125,7 @@ nav ul li a.active {
   background: #fff;
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .info-grid a {
@@ -132,132 +133,45 @@ nav ul li a.active {
   text-decoration: none;
 }
 
-/* Button */
-/* Resume Button */
+/* ===== BUTTON ===== */
 .resume-btn-container {
-  margin-top: 20px; /* spacing above the button */
+  margin-top: 20px;
 }
 
 .resume-btn-container .btn {
   display: inline-block;
-  background-color: #4f6364;   /* Grey background */
-  color: #fff;                 /* White text */
+  background-color: #4f6364;
+  color: #fff;
   font-weight: 600;
   padding: 12px 25px;
   border-radius: 6px;
-  text-decoration: none;       /* Remove underline */
+  text-decoration: none;
   transition: background 0.3s, transform 0.2s;
   cursor: pointer;
 }
 
 .resume-btn-container .btn:hover {
-  background-color: #555;      /* Darker grey on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #555;
+  transform: translateY(-2px);
 }
 
-/* Footer Styling */
-.footer {
-  background: #2b3035;
-  color: #dcdcdc;
-  padding: 40px;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-}
-
-/* Footer container: left icons + center content */
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 20px;
-}
-
-/* Left: Social Icons */
-.footer-left {
-  position: absolute; /* push icons to left */
-  left: 40px; /* adjust spacing from edge */
-}
-
-.ftco-footer-social {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 10px;
-}
-
-.ftco-footer-social li a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  background: #444;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 16px;
-  transition: all 0.3s;
-}
-
-/* Brand colors on hover */
-.ftco-footer-social li a[href*="facebook"]:hover { background: #1877F2; }
-.ftco-footer-social li a[href*="instagram"]:hover { background: #E1306C; }
-.ftco-footer-social li a[href*="github"]:hover { background: #333; }
-.ftco-footer-social li a[href*="linkedin"]:hover { background: #0A66C2; }
-
-.ftco-footer-social li a:hover { transform: scale(1.1); }
-
-/* Center content */
-.footer-center {
-  text-align: center;
-}
-
-.footer-center p {
-  margin: 3px 0;
-  font-size: 14px;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-  font-size: 13px;
-  color: #aaa;
-  text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .footer-left {
-    position: static;
-  }
-}
+/* ===== FOOTER ===== */
 .footer {
   background: #2b3035;
   color: #dcdcdc;
   padding: 40px 20px;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* Footer container: left, center, right */
 .footer-container {
   display: flex;
-  justify-content: space-between; /* left, center, right */
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Social Media Icons (Left) */
+/* Left icons */
 .footer-left .social-logos {
   display: flex;
   gap: 12px;
@@ -267,19 +181,31 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: #444;
   border-radius: 50%;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   transition: transform 0.3s ease, background 0.3s ease;
-  text-decoration: none;
 }
 
-.footer-left .social-logos a:hover { transform: scale(1.1); }
+.footer-left .social-logos a:hover {
+  transform: scale(1.1);
+}
 
-/* Coding Platform Logos (Right) */
+/* Center */
+.footer-center {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-center p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* Right icons */
 .footer-right .social-logos {
   display: flex;
   gap: 12px;
@@ -289,8 +215,8 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: #444;
   border-radius: 50%;
   overflow: hidden;
@@ -303,20 +229,10 @@ nav ul li a.active {
   object-fit: contain;
 }
 
-.footer-right .social-logos a:hover { transform: scale(1.1); }
-
-/* Center content */
-.footer-center {
-  text-align: center;
-  flex: 1;
+.footer-right .social-logos a:hover {
+  transform: scale(1.1);
 }
 
-.footer-center p {
-  margin: 3px 0;
-  font-size: 14px;
-}
-
-/* Footer Bottom */
 .footer-bottom {
   margin-top: 20px;
   border-top: 1px solid #444;
@@ -326,19 +242,433 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets & Mobiles */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+}
+
+/* Hamburger menu appears */
 @media (max-width: 768px) {
-  .footer-container {
+  header {
+    padding: 15px 20px;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    z-index: 200;
+  }
+
+  /* Mobile nav menu */
+  nav {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
+    margin-top: 50px;
   }
 
-  .footer-left, .footer-right {
-    order: 0;
+
+
+  /* About section stacking */
+  .about {
+    padding: 50px 25px;
   }
 
-  .footer-center {
+  .about-container {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .about-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer stacking */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .about-img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .resume-btn-container .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .footer-left .social-logos a,
+  .footer-right .social-logos a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .footer-center p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+/* Accessibility: Focus styles for keyboard nav */
+nav ul li a:focus,
+.resume-btn-container .btn:focus,
+.footer-left .social-logos a:focus,
+.footer-right .social-logos a:focus {
+  outline: 2px solid #808000;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure images don't overflow on very small screens */
+@media (max-width: 480px) {
+  .about-img img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* About Content - Allow flexible sizing */
+.about-content {
+  flex: 1;
+  min-width: 0;
+  /* Key: Allows shrinking below content size */
+  /* Remove: min-width: 350px; */
+}
+
+/* Images - Prevent overflow */
+.about-img img,
+.hero-logo img,
+.footer-right .social-logos a img {
+  max-width: 100%;
+  /* Safety net for any fixed widths */
+}
+
+/* Info Grid - Ensure text wraps */
+.info-grid div {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
+  /* Handles long emails/URLs */
+}
+
+.info-grid a {
+  color: #808000;
+  text-decoration: none;
+  word-break: break-all;
+  /* Extra for links */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (earlier column stack to avoid overflow) */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+}
+
+/* Stack earlier for mid-tablets */
+@media (max-width: 850px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    order: -1;
+    /* Image above content for better mobile flow */
+  }
+}
+
+/* Hamburger menu appears */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    z-index: 200;
+  }
+
+
+  /* Mobile nav menu - Adjust top to match header height (~70px) */
+  nav {
+    position: fixed;
+    top: 70px;
+    /* Increased from 65px to avoid overlap */
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    /* Subtract header height */
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+
+  /* About section stacking (redundant now, but keeps img sizing) */
+  .about {
+    padding: 50px 25px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    /* Center items on mobile */
+  }
+
+  /* Footer stacking */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .about-img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .resume-btn-container .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .footer-left .social-logos a,
+  .footer-right .social-logos a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .footer-center p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+  /* Extra tight for tiny screens */
+  nav {
+    width: 100%;
+    /* Full width overlay on very small */
+    right: -100vw;
+    /* Use viewport units */
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
+/* ===== Hamburger ===== */
+.menu-toggle {
+  display: none;
+  /* Hidden on desktop */
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  z-index: 200;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #808000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+  /* Mobile nav menu */
+  nav {
+    position: fixed;
+    top: 70px;
+    /* adjust depending on header height */
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    z-index: 100;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
   }
 }

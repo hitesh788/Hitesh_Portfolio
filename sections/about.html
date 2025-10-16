@@ -4,29 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/Favicon.png">
-  <title>About | Hitesh</title>
+  <!-- Favicon (kept the absolute URL for reliability) -->
+  <link rel="icon" type="image/png" href="https://www.hiteshjoshi.com.np/assets/favicon.png" loading="lazy">
+  <!-- Title (kept the more descriptive one for SEO) -->
+  <title>Hitesh Joshi | Full-Stack Developer & Cybersecurity Enthusiast</title>
+  <!-- Basic SEO -->
+  <meta name="description"
+    content="Portfolio of Hitesh Joshi – a Full-Stack Developer passionate about cybersecurity, AI, and modern web solutions.">
+  <meta name="keywords" content="Hitesh Joshi, portfolio, developer, cybersecurity, MERN stack, web developer, Nepal">
+  <meta name="author" content="Hitesh Joshi">
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Hitesh Joshi | Developer Portfolio">
+  <meta property="og:description" content="Explore Hitesh Joshi’s projects, skills, and certifications.">
+  <meta property="og:image" content="https://www.hiteshjoshi.com.np/assets/profile.jpg">
+  <meta property="og:url" content="https://www.hiteshjoshi.com.np/">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/about.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Basic SEO -->
-<title>Hitesh Joshi | Full-Stack Developer & Cybersecurity Enthusiast</title>
-<meta name="description" content="Portfolio of Hitesh Joshi – a Full-Stack Developer passionate about cybersecurity, AI, and modern web solutions.">
-<meta name="keywords" content="Hitesh Joshi, portfolio, developer, cybersecurity, MERN stack, web developer, Nepal">
-<meta name="author" content="Hitesh Joshi">
-
-<!-- Social Sharing -->
-<meta property="og:title" content="Hitesh Joshi | Developer Portfolio">
-<meta property="og:description" content="Explore Hitesh Joshi’s projects, skills, and certifications.">
-<meta property="og:image" content="https://www.hiteshjoshi.com.np/assets/profile.jpg">
-<meta property="og:url" content="https://www.hiteshjoshi.com.np/">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="https://www.hiteshjoshi.com.np/assets/favicon.png" loading="lazy">
-
-
+  <!-- Removed unused Bootstrap -->
 </head>
 
 <body>
@@ -38,9 +35,15 @@
       </a>
     </section>
 
-    <nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
-         <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
@@ -49,7 +52,6 @@
       </ul>
     </nav>
   </header>
-
 
   <!-- About Section -->
   <section class="about">
@@ -84,35 +86,38 @@
           <div><strong>Name:</strong> Hitesh Joshi</div>
           <div><strong>Location:</strong> Kanchanpur, Sudurpaschim</div>
           <div><strong>Email:</strong> <a href="mailto:hejoshi77@gmail.com">hejoshi77@gmail.com</a></div>
-          <div><strong>Phone:</strong> <a href="tel:+918015600894"><br>+91-8015600894</a></div>
+          <div><strong>Phone:</strong> <a href="tel:+918015600894">+91-8015600894</a></div>
         </div>
 
         <!-- Resume Button -->
         <div class="resume-btn-container">
-          <a href="/documents/Hitesh-Resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">View
-            Resume</a>
+          <a href="/documents/Hitesh-Resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Footer (moved outside the section) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <!-- Left: Social Media Icons -->
       <div class="footer-left">
         <div class="social-logos">
-          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank">
+          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank">
+          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://github.com/hitesh788" draggable="false" target="_blank">
+          <a href="https://github.com/hitesh788" draggable="false" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank">
+          <a href="https://linkedin.com/in/hiteshjoshi1110" draggable="false" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
@@ -127,11 +132,13 @@
       <!-- Right: Coding Platform Logos -->
       <div class="footer-right">
         <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" draggable="false" target="_blank"><img src="/images/LeetCode_Logo.webp"
-              alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" draggable="false"target="_blank"><img src="/images/Codechef_Logo.webp"
-              alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77"draggable="false" target="_blank"><img src="/images/Hackerrank_Logo.webp"
+          <a href="https://leetcode.com/u/hejoshi77/" draggable="false" target="_blank" rel="noopener noreferrer"
+            aria-label="LeetCode"><img src="/images/LeetCode_Logo.webp" alt="LeetCode Logo" loading="lazy"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" draggable="false" target="_blank"
+            rel="noopener noreferrer" aria-label="CodeChef"><img src="/images/Codechef_Logo.webp" alt="CodeChef Logo"
+              loading="lazy"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" draggable="false" target="_blank"
+            rel="noopener noreferrer" aria-label="HackerRank"><img src="/images/Hackerrank_Logo.webp"
               alt="HackerRank Logo" loading="lazy"></a>
         </div>
       </div>
@@ -141,10 +148,18 @@
     <div class="footer-bottom">
       <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
-    </footer>
+  </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
 
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
 
+  </script>
 </body>
 
 </html>

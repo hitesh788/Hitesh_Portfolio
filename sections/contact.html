@@ -24,7 +24,13 @@
       </a>
     </section>
 
-    <nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
@@ -35,7 +41,6 @@
       </ul>
     </nav>
   </header>
-
   <!-- Contact Section -->
   <section class="contact">
 
@@ -73,7 +78,8 @@
       <div class="contact-info">
         <div class="info-box">
           <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-          <p><strong>Address:</strong><br> <a href="https://maps.app.goo.gl/ZQVTKwwK6nBnfDUw8" target="_blank">Kalimati, Kathmandu, Nepal</a></p>
+          <p><strong>Address:</strong><br> <a href="https://maps.app.goo.gl/ZQVTKwwK6nBnfDUw8" target="_blank">Kalimati,
+              Kathmandu, Nepal</a></p>
         </div>
         <div class="info-box">
           <span class="icon"><i class="fab fa-whatsapp"></i></span>
@@ -81,24 +87,25 @@
         </div>
         <div class="info-box">
           <span class="icon"><i class="fas fa-envelope"></i></span>
-          <p><strong>Email:</strong><br> <a href="mailto:hejoshi77@gmail.com" target="_blank">hejoshi77@gmail.com</a></p>
+          <p><strong>Email:</strong><br> <a href="mailto:hejoshi77@gmail.com" target="_blank">hejoshi77@gmail.com</a>
+          </p>
         </div>
       </div>
     </div>
-   <div class="ad-box" id="ad-box">
-  <button class="close-ad" id="close-ad">&times;</button>
-  <a href="https://www.softgridtechnologies.site" target="_blank">
-    <img src="/images/softgrid.webp" alt="Ad Banner" loading="lazy">
-  </a>
-  <script>
-  document.getElementById("close-ad").addEventListener("click", function() {
-    const ad = document.getElementById("ad-box");
-    ad.style.animation = "fadeOut 0.3s forwards";
-    setTimeout(() => ad.style.display = "none", 300);
-  });
-</script>
+    <div class="ad-box" id="ad-box">
+      <button class="close-ad" id="close-ad">&times;</button>
+      <a href="https://www.softgridtechnologies.site" target="_blank">
+        <img src="/images/softgrid.webp" alt="Ad Banner" loading="lazy">
+      </a>
+      <script>
+        document.getElementById("close-ad").addEventListener("click", function () {
+          const ad = document.getElementById("ad-box");
+          ad.style.animation = "fadeOut 0.3s forwards";
+          setTimeout(() => ad.style.display = "none", 300);
+        });
+      </script>
 
-</div>
+    </div>
 
 
   </section>
@@ -139,7 +146,16 @@
       <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
 
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+  </script>
   <!-- ✅ Toastify JS -->
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
