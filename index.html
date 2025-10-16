@@ -38,18 +38,18 @@
   <!-- Navbar -->
   <header>
     <section id="home-section" class="hero">
-      <a href="index.html" class="hero-logo">
+      <a href="/index.html" class="hero-logo">
         <img src="/images/Main-Logo.webp" alt="Logo" loading="lazy">
       </a>
-      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
     </section>
 
-    <nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/sections/about.html" class="active">About</a></li>
@@ -182,9 +182,14 @@
     </div>
   </footer>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
-    }
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
   </script>
 
 
