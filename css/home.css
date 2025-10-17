@@ -127,7 +127,8 @@ nav ul li a.active {
 }
 
 .resume-btn-container .btn:hover {
-  background-color: #555;
+  background-color: #d4d0d0;
+  color: #000;
   transform: translateY(-2px);
 }
 
