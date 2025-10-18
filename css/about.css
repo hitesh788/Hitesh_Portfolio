@@ -672,3 +672,52 @@ nav ul li a.active {
     margin: 15px 0;
   }
 }
+/* ===== ABOUT SECTION FIXED ===== */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* reduced from 50px */
+  flex-wrap: nowrap; /* prevent wrap on normal desktop zoom */
+  max-width: 1100px; /* keeps it centered and balanced */
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-img {
+  flex: 0 0 280px; /* fixed image width */
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #808000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 0; /* allows shrinking gracefully */
+}
+
+/* Info grid remains adaptive but tighter */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* Prevents drop-down when zoomed */
+@media (max-width: 1200px) {
+  .about-container {
+    gap: 30px;
+    flex-wrap: wrap; /* stack when truly needed */
+  }
+}
+
