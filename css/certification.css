@@ -50,14 +50,14 @@ nav ul li a.active {
   color: #808000;
 }
 
-/* Hamburger Menu */
+/* ===== HAMBURGER MENU ===== */
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: #333;
   z-index: 200;
 }
-
 
 /* ===== CERTIFICATIONS SECTION ===== */
 .certifications {
@@ -115,20 +115,13 @@ nav ul li a.active {
   border-radius: 10px;
 }
 
-/* Flexible content for descriptions */
-.certifications-content {
-  flex: 1;
-  min-width: 0;
-  /* Allows shrinking */
-}
-
-/* ===== FOOTER ===== */
+/* ===== FOOTER (Unified with Projects/About Pages) ===== */
 .footer {
   background: #2b3035;
   color: #dcdcdc;
   padding: 40px 20px;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-container {
@@ -156,18 +149,20 @@ nav ul li a.active {
   border-radius: 50%;
   color: #fff;
   font-size: 18px;
+  text-decoration: none !important; /* No underline */
   transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-left .social-logos a:hover,
+.footer-right .social-logos a:hover {
+  transform: scale(1.1);
+  background: #808000;
 }
 
 .footer-right .social-logos a img {
   max-width: 70%;
   max-height: 70%;
   object-fit: contain;
-}
-
-.footer-left .social-logos a:hover,
-.footer-right .social-logos a:hover {
-  transform: scale(1.1);
 }
 
 .footer-center {
@@ -203,6 +198,16 @@ nav ul li a.active {
 
   .certificates-grid {
     gap: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
   }
 }
 
@@ -251,6 +256,17 @@ nav ul li a.active {
 
   .certifications {
     padding: 50px 25px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
   }
 }
 
@@ -302,188 +318,10 @@ nav ul li a.active {
   }
 }
 
-/* Accessibility: Focus styles */
+/* ===== ACCESSIBILITY ===== */
 nav ul li a:focus,
 .footer-left .social-logos a:focus,
 .footer-right .social-logos a:focus {
   outline: 2px solid #808000;
   outline-offset: 2px;
-}
-
-/* ===== Hamburger ===== */
-.menu-toggle {
-  display: none;
-  /* Hidden on desktop */
-  font-size: 26px;
-  cursor: pointer;
-  color: #333;
-  z-index: 200;
-}
-
-/* Navbar */
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  transition: all 0.4s ease-in-out;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #808000;
-}
-
-/* ===== Responsive Styles ===== */
-
-/* Tablet */
-@media (max-width: 992px) {
-  header {
-    padding: 15px 40px;
-  }
-
-  .specialities {
-    padding: 40px 40px;
-  }
-
-  .specialities h2 {
-    font-size: 24px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-  /* Show hamburger */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Hide nav by default */
-  nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 70%;
-    height: calc(100vh - 70px);
-    background: #fff;
-    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s ease;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    z-index: 999;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .hero-logo img {
-    height: 32px;
-  }
-
-  .specialities {
-    padding: 30px 20px;
-  }
-
-  .specialities h2 {
-    font-size: 22px;
-  }
-
-  .card {
-    padding: 25px 20px;
-  }
-
-  /* Footer stacked layout */
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align:
-      center;
-  }
-
-  /* ===== Hamburger ===== */
-  .menu-toggle {
-    display: none;
-    /* Hidden on desktop */
-    font-size: 26px;
-    cursor: pointer;
-    color: #333;
-    z-index: 200;
-  }
-
-  /* Navbar */
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    transition: all 0.4s ease-in-out;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #000;
-    transition: color 0.3s ease;
-  }
-
-  nav ul li a:hover,
-  nav ul li a.active {
-    color: #808000;
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 991px) {
-
-    /* Show hamburger */
-    .menu-toggle {
-      display: block;
-      position: absolute;
-      right: 25px;
-      top: 20px;
-    }
-
-    /* Mobile nav menu */
-    nav {
-      position: fixed;
-      top: 70px;
-      /* adjust depending on header height */
-      right: -100%;
-      width: 70%;
-      height: calc(100vh - 70px);
-      background: #fff;
-      box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
-      transition: right 0.3s ease;
-      display: flex;
-      justify-content: center;
-      padding-top: 50px;
-      z-index: 100;
-    }
-
-    nav.active {
-      right: 0;
-    }
-
-    nav ul {
-      flex-direction: column;
-      gap: 25px;
-      text-align: center;
-    }
-
-    nav ul li {
-      margin: 15px 0;
-    }
-  }
 }

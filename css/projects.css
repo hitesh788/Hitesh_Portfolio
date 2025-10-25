@@ -161,6 +161,11 @@ nav ul li a.active {
 
 .footer-left .social-logos a:hover {
   transform: scale(1.1);
+  background: #808000;
+}
+.footer-right .social-logos a:hover {
+  transform: scale(1.1);
+  background: #808000;
 }
 
 .footer-right .social-logos a img {
@@ -324,7 +329,7 @@ nav ul li a.active {
 }
 
 .project-btn:hover {
-  background-color: #fbf7f7;
+  background-color: #808000;
   color:#000;
   transform: translateY(-2px);
 }
