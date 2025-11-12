@@ -86,42 +86,156 @@ nav ul li a.active {
   color: #666;
 }
 
-/* Certificates Grid */
+/* ===== Certificates Grid ===== */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  justify-items: center;
+  align-items: start;
 }
 
+/* Uniform Certificate Card */
 .certificate {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  word-break: break-word;
+  width: 100%;
+  max-width: 420px;
+  height: 240px; /* 🔥 Fixed uniform height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.certificate:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.certificate a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .certificate img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: contain; /* Ensures proportional scaling inside box */
+  border-radius: 0;
+  vertical-align: middle;
+  background: #fff;
 }
 
-/* ===== FOOTER (Unified with Projects/About Pages) ===== */
+/* Hover effect */
+.certificate:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate.hidden {
+  display: none;
+}
+
+.certificate.hidden.show {
+  display: flex;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Certificate Popup Modal ===== */
+.cert-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.cert-popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: scaleUp 0.25s ease;
+}
+
+.cert-popup-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cert-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cert-popup .close-btn:hover {
+  color: #0078ff;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== View More Button ===== */
+.view-more-container {
+  margin-top: 35px;
+  text-align: center;
+}
+
+#viewMoreBtn {
+  background: #4f6364;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#viewMoreBtn:hover {
+  background: #808000;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER ===== */
 .footer {
   background: #2b3035;
   color: #dcdcdc;
   padding: 40px 20px;
   width: 100%;
-  font-family: "Poppins", sans-serif;
 }
 
 .footer-container {
@@ -149,7 +263,7 @@ nav ul li a.active {
   border-radius: 50%;
   color: #fff;
   font-size: 18px;
-  text-decoration: none !important; /* No underline */
+  text-decoration: none !important;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -185,8 +299,6 @@ nav ul li a.active {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-
-/* Tablets */
 @media (max-width: 992px) {
   header {
     padding: 15px 40px;
@@ -209,68 +321,23 @@ nav ul li a.active {
   .footer-right {
     justify-content: center;
   }
+
+  .certificate {
+    height: 220px; /* slightly smaller on tablets */
+  }
 }
 
-/* Mid-tablets / stack grid */
 @media (max-width: 850px) {
   .certificates-grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
-}
 
-/* Mobile */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 250px;
-    height: calc(100vh - 70px);
-    background: #fff;
-    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s ease;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 50px;
-  }
-
-  .certifications {
-    padding: 50px 25px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-left,
-  .footer-right {
-    justify-content: center;
+  .certificate {
+    height: auto; /* adjust naturally on narrow screens */
   }
 }
 
-/* Small Phones */
 @media (max-width: 480px) {
   header {
     padding: 10px 15px;
@@ -288,8 +355,7 @@ nav ul li a.active {
     font-size: 14px;
   }
 
-  .certificate img {
-    width: 100%;
+  .certificate {
     height: auto;
   }
 

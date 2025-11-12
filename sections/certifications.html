@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" draggable="false" href="/images/Favicon.webp">
   <title>Certifications | Hitesh</title>
+
+  <!-- Link external stylesheet -->
   <link rel="stylesheet" href="/css/certification.css">
-  <!-- Font Awesome for social icons -->
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,10 +34,10 @@
     <nav id="navbar">
       <ul>
         <li><a href="/index.html">Home</a></li>
-        <li><a href="/sections/about.html" class="active">About</a></li>
+        <li><a href="/sections/about.html">About</a></li>
         <li><a href="/sections/projects.html">Projects</a></li>
         <li><a href="/sections/specialities.html">Specialities</a></li>
-        <li><a href="/sections/certifications.html">Certifications</a></li>
+        <li><a href="/sections/certifications.html" class="active">Certifications</a></li>
         <li><a href="/sections/contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -44,119 +47,132 @@
   <section class="certifications">
     <h3>CERTIFICATIONS</h3>
     <h2>Certificates</h2>
-    <p>Proudly showcasing my certificate as a testament to my expertise and dedication:</p>
+    <p>Proudly showcasing my certifications as proof of my dedication and continuous learning.</p>
 
-    <div class="certificates-grid">
-      <div class="certificate">
-        <a href="https://www.credly.com/badges/fc8ad97a-6881-4843-894c-13598a0f5e47" target="_blank">
-          <img src="/certifications/CISCO_Data Science.webp" draggable="false" alt="Certificate 1" loading="lazy">
-        </a>
-      </div>
+    <!-- Certificates Grid -->
+    <div class="certificates-grid" id="certificatesGrid">
+      <!-- 8 certificates visible initially -->
+      <div class="certificate"><a href="https://www.credly.com/badges/fc8ad97a-6881-4843-894c-13598a0f5e47" target="_blank"><img src="/certifications/CISCO_Data Science.webp" alt="CISCO Data Science"></a></div>
+      <div class="certificate"><a href="https://www.coursera.org/learn/foundations-of-cybersecurity/home/module/1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta" target="_blank"><img src="/certifications/Coursera_Foundation_Of_Cybersecurity.webp" alt="Coursera Cybersecurity"></a></div>
+      <div class="certificate"><a href="https://www.udemy.com/certificate/UC-3a5394ec-5b25-48ca-a56d-dc9b5a11c8b0/" target="_blank"><img src="/certifications/DSA_Udemy.webp" alt="DSA Udemy"></a></div>
+      <div class="certificate"><a href="https://www.life-global.org/certificate/1f422dca-cf77-4e1a-a6ea-618bb1c5be57" target="_blank"><img src="/certifications/HP_Agile.webp" alt="HP Agile"></a></div>
+      <div class="certificate"><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_Tata%20Group_f2DPjYdX3Srw9nPmd_1709723804480_completion_certificate.pdf" target="_blank"><img src="/certifications/TATA_Cybersecurity.webp" alt="TATA Cybersecurity"></a></div>
+      <div class="certificate"><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_f2DPjYdX3Srw9nPmd_1751460093233_completion_certificate.pdf" target="_blank"><img src="/certifications/Deloitte_Job Simulation.webp" alt="Deloitte Simulation"></a></div>
+      <div class="certificate"><a href="https://tinyurl.com/ctwk2s6t" target="_blank"><img src="/certifications/Simplilearn_C Programming.webp" alt="Simplilearn C Programming"></a></div>
+      <div class="certificate"><a href="https://learn.nvidia.com/certificates?id=SQfSZMTRSWuEqJWYS4hMZw#" target="_blank"><img src="/certifications/Nvidia_Deep-Learning.webp" alt="Nvidia Deep Learning"></a></div>
 
-      <div class="certificate">
-        <a href="https://www.coursera.org/learn/foundations-of-cybersecurity/home/module/1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta"
-          target="_blank">
-          <img src="/certifications/Coursera_Foundation_Of_Cybersecurity.webp" draggable="false" alt="Certificate 2"
-            loading="lazy">
-        </a>
-      </div>
-
-      <div class="certificate">
-        <a href="https://www.udemy.com/certificate/UC-3a5394ec-5b25-48ca-a56d-dc9b5a11c8b0/" target="_blank">
-          <img src="/certifications/DSA_Udemy.webp" draggable="false" alt="Certificate 3" loading="lazy">
-        </a>
-      </div>
-
-      <div class="certificate">
-        <a href="https://www.life-global.org/certificate/1f422dca-cf77-4e1a-a6ea-618bb1c5be57" target="_blank">
-          <img src="/certifications/HP_Agile.webp" draggable="false" alt="Certificate 4" loading="lazy">
-        </a>
-      </div>
-
-      <div class="certificate">
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_Tata%20Group_f2DPjYdX3Srw9nPmd_1709723804480_completion_certificate.pdf"
-          draggable="false" target="_blank">
-          <img src="/certifications/TATA_Cybersecurity.webp" draggable="false" alt="Certificate 5" loading="lazy">
-        </a>
-      </div>
-
-      <div class="certificate">
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_f2DPjYdX3Srw9nPmd_1751460093233_completion_certificate.pdf"
-          draggable="false" target="_blank">
-          <img src="/certifications/Deloitte_Job Simulation.webp" draggable="false" alt="Certificate 6" loading="lazy">
-        </a>
-      </div>
-
-      <div class="certificate">
-        <a href="https://tinyurl.com/ctwk2s6t" target="_blank">
-          <img src="/certifications/Simplilearn_C Programming.webp" draggable="false" alt="Certificate 7"
-            loading="lazy">
-        </a>
-      </div>
-      <div class="certificate">
-        <a href="https://learn.nvidia.com/certificates?id=SQfSZMTRSWuEqJWYS4hMZw#" target="_blank">
-          <img src="/certifications/Nvidia_Deep-Learning.webp" draggable="false" alt="Certificate 8" loading="lazy">
-        </a>
-      </div>
+      <!-- 8 hidden certificates -->
+      <div class="certificate hidden"><a href="#"><img src="/certifications/Udemy_AI_Python.webp" alt="Python AI"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/AWS_Cloud_Practitioner.webp" alt="AWS Cloud"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/Google_MachineLearning.webp" alt="Google ML"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/JP_Morgan_Cyber_Virtual.webp" alt="JPMorgan Cyber"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/LinkedIn_WebSecurity.webp" alt="Web Security"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/Coursera_Networking_Fundamentals.webp" alt="Networking"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/PWC_Data_Analytics.webp" alt="PwC Data Analytics"></a></div>
+      <div class="certificate hidden"><a href="#"><img src="/certifications/Udemy_Cyber_Essentials.webp" alt="Cyber Essentials"></a></div>
     </div>
-    
+
+    <!-- View More Button -->
+    <div class="view-more-container">
+      <button id="viewMoreBtn">View More</button>
+    </div>
   </section>
 
-  <!-- Footer (moved outside the section) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <!-- Left: Social Media Icons -->
       <div class="footer-left">
         <div class="social-logos">
-          <a href="https://www.facebook.com/hiteshjoshi1110" draggable="false" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/hiteshh_joshiii" draggable="false" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://github.com/hitesh788" draggable="false" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/hejoshi77/" draggable="false" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+          <a href="https://www.facebook.com/hiteshjoshi1110" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/hiteshh_joshiii" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/hitesh788" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hejoshi77/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
-      <!-- Center: Contact Info -->
       <div class="footer-center">
         <p>Kritipur, Kathmandu, Nepal</p>
         <p>+977-9748285243 | +91-8015600894 | hejoshi77@gmail.com</p>
       </div>
 
-      <!-- Right: Coding Platform Logos -->
       <div class="footer-right">
         <div class="social-logos">
-          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp"
-              draggable="false" alt="LeetCode Logo" loading="lazy"></a>
-          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp"
-              draggable="false" alt="CodeChef Logo" loading="lazy"></a>
-          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp"
-              draggable="false" alt="HackerRank Logo" loading="lazy"></a>
+          <a href="https://leetcode.com/u/hejoshi77/" target="_blank"><img src="/images/LeetCode_Logo.webp" alt="LeetCode"></a>
+          <a href="https://www.codechef.com/users/hiteshjoshi202" target="_blank"><img src="/images/Codechef_Logo.webp" alt="CodeChef"></a>
+          <a href="https://www.hackerrank.com/profile/hejoshi77" target="_blank"><img src="/images/Hackerrank_Logo.webp" alt="HackerRank"></a>
         </div>
       </div>
     </div>
 
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p>Copyright ©2025 All rights reserved | Hitesh Joshi</p>
     </div>
   </footer>
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
 
-    menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+  <!-- JavaScript -->
+ <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+  const hiddenCertificates = document.querySelectorAll('.certificate.hidden');
+
+  // Navbar toggle
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // View More / View Less toggle
+  let certificatesShown = false;
+  viewMoreBtn.addEventListener('click', () => {
+    certificatesShown = !certificatesShown;
+    hiddenCertificates.forEach(cert => cert.classList.toggle('show'));
+    viewMoreBtn.textContent = certificatesShown ? 'View Less' : 'View More';
+  });
+
+  // --- Certificate click logic ---
+  const certificates = document.querySelectorAll('.certificate a');
+  let clickTimeout;
+
+  certificates.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (clickTimeout) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+        // Double click → open actual certificate link
+        window.open(this.href, '_blank');
+      } else {
+        // Single click → show popup
+        clickTimeout = setTimeout(() => {
+          const imgSrc = this.querySelector('img').src;
+          showPopup(imgSrc);
+          clickTimeout = null;
+        }, 250);
+      }
     });
+  });
 
-  </script>
+  // --- Popup Function ---
+  function showPopup(imgSrc) {
+    const popup = document.createElement('div');
+    popup.classList.add('cert-popup');
+    popup.innerHTML = `
+      <div class="cert-popup-content">
+        <span class="close-btn">&times;</span>
+        <img src="${imgSrc}" alt="Certificate Preview">
+      </div>
+    `;
+    document.body.appendChild(popup);
+
+    // Close actions
+    popup.querySelector('.close-btn').addEventListener('click', () => popup.remove());
+    popup.addEventListener('click', (e) => { if (e.target === popup) popup.remove(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') popup.remove(); });
+  }
+</script>
+
 
 </body>
 
